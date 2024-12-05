@@ -1,0 +1,46 @@
+body {
+  background-color: rgba(250, 235, 215, 0.608);
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5%;
+}
+
+.panel {
+  margin-right: 40px;
+  height: 80vh;
+  max-width: 80px;
+  min-width: 80px;
+  border-radius: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  transition: width 0.35s ease-in, transform 0.3s ease-in;
+  box-shadow: 2px 2px 7px black;
+}
+
+.active {
+  min-width: 860px;
+}
+
+.panel h3 {
+  display: none;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: lighter;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.panel.active h3 {
+  display: block;
+  opacity: 1;
+}
